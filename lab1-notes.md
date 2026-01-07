@@ -1,13 +1,13 @@
 # Lab 1: Basic Network Security Lab
 
 ## Objective
-To create an isolated virtual network and observe how basic security
-controls affect system visibility and access.
+This lab simulates a basic cybersecurity testing environment using
+a Windows target system and a Linux-based attacker system (Kali Linux)
+on an isolated virtual network.
 
 ## Environment
 - VirtualBox
 - Windows 10 VM
-- Ubuntu Linux VM
 - Kali Linux VM
 
 ## Network Configuration
@@ -19,7 +19,6 @@ controls affect system visibility and access.
 2. Configured network adapters to Internal Network
 3. Enabled Windows Firewall
 4. Performed basic reconnaissance from Kali Linux
-5. Reviewed logs on Ubuntu
 
 ## Observations
 - Windows firewall reduced visible open ports
