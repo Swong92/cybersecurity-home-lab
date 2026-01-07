@@ -7,9 +7,8 @@ and defensive/offensive techniques.
 
 ## Lab Environment
 - VirtualBox
-- Windows 10 (Evaluation)
-- Ubuntu Linux
-- Kali Linux
+- Windows 10 (Target System)
+- Kali Linux (Linux-based Attacker & Analysis System)
 
 ## Skills Practiced
 - Virtualization
