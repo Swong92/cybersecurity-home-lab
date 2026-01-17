@@ -79,3 +79,34 @@ security and incident response.
 
 ## Status
 This repository is actively updated as I complete new labs.
+
+## Lab 2: Wireshark – Compare Allowed vs Blocked Traffic
+
+### Objective
+Capture and compare network traffic to validate how Windows Defender Firewall
+impacts ICMP communication between a Kali Linux attacker VM and a Windows 10 target VM.
+
+### Environment
+- Kali Linux (Wireshark capture host)
+- Windows 10 (target)
+- VirtualBox host-only network: 192.168.56.0/24
+
+### Procedure Summary
+1. Started Wireshark capture on the host-only interface.
+2. Filtered traffic using `icmp`.
+3. Generated ICMP traffic from Kali to Windows using ping.
+4. Observed **blocked behavior**: Echo Requests without Echo Replies.
+5. Enabled Windows inbound rule: **Echo Request (ICMPv4-In)**.
+6. Re-tested ping and observed **allowed behavior**: Echo Requests and Echo Replies.
+
+### Findings
+- When ICMP was blocked, Wireshark showed outbound Echo Requests from Kali
+  with no response from Windows, indicating the firewall dropped inbound ICMP.
+- After enabling the Windows ICMPv4 inbound rule, Wireshark showed successful
+  request/reply pairs, confirming the firewall rule change allowed ICMP traffic.
+
+### Skills Demonstrated
+- Packet capture and filtering (Wireshark)
+- Firewall rule validation (Windows Defender Firewall)
+- Evidence-based troubleshooting using packet-level visibility
+
